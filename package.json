@@ -1,6 +1,6 @@
 {
-  "name": "bitgo-utxo-lib",
-  "version": "1.8.0",
+  "name": "@bitgo/utxo-lib",
+  "version": "1.9.1",
   "description": "Client-side Bitcoin JavaScript library",
   "main": "./src/index.js",
   "engines": {
@@ -19,7 +19,7 @@
   "scripts": {
     "coverage-report": "nyc report --reporter=lcov",
     "coverage-html": "nyc report --reporter=html",
-    "coverage": "nyc --check-coverage --branches 90 --functions 90 mocha test/ test/forks/*",
+    "coverage": "BITGO_UTXO_LIB_TEST_EXPECTED_COUNT=3442 nyc --check-coverage --branches 90 --functions 90 mocha --recursive",
     "integration": "mocha test/integration/",
     "standard": "standard",
     "test": "npm run standard && npm run coverage",
@@ -57,7 +57,7 @@
     "bs58": "^4.0.0",
     "dhttp": "^2.4.2",
     "minimaldata": "^1.0.2",
-    "mocha": "^5.2.0",
+    "mocha": "^6.2.3",
     "nyc": "^14.1.1",
     "proxyquire": "^1.4.0",
     "sinon": "^1.12.2",
